@@ -30,7 +30,7 @@ export default function IndustriesPage({ onNavigate, onOpenContact }) {
         <div className="site-container">
           <div style={{ maxWidth: '820px' }}>
             <span className="label-eyebrow">Industry Experience</span>
-            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#0B2340' }}>
+            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#2D282A' }}>
               Deep Domain Knowledge. <br />
               <span className="text-red">Proven Enterprise Focus.</span>
             </h1>
@@ -72,7 +72,7 @@ export default function IndustriesPage({ onNavigate, onOpenContact }) {
                     </span>
                   </div>
 
-                  <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#0B2340', marginBottom: '0.35rem' }}>
+                  <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: '#2D282A', marginBottom: '0.35rem' }}>
                     {ind.name}
                   </h2>
                   <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#981B25', marginBottom: '1.25rem' }}>
@@ -91,7 +91,7 @@ export default function IndustriesPage({ onNavigate, onOpenContact }) {
 
                   {/* Practical Solutions */}
                   <div style={{ backgroundColor: '#F6F4F2', padding: '1rem', borderRadius: '8px', border: '1px solid #E7E5E3', marginBottom: '1.5rem' }}>
-                    <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#0B2340', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.3rem' }}>
+                    <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#2D282A', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.3rem' }}>
                       Practical Solution Approach
                     </div>
                     <p style={{ fontSize: '0.875rem', color: '#4A5568', lineHeight: 1.5 }}>
@@ -119,7 +119,7 @@ export default function IndustriesPage({ onNavigate, onOpenContact }) {
         <div className="site-container">
           <div
             style={{
-              backgroundColor: '#0B2340',
+              backgroundColor: '#2D282A',
               borderRadius: '20px',
               padding: 'clamp(2.5rem, 5vw, 4rem)',
               color: '#FFFFFF',
@@ -134,7 +134,7 @@ export default function IndustriesPage({ onNavigate, onOpenContact }) {
               <h3 style={{ fontSize: 'clamp(1.85rem, 3vw, 2.5rem)', fontWeight: 800, color: '#FFFFFF', marginTop: '0.5rem', marginBottom: '1rem' }}>
                 Outcome-Focused Engineering Across Borders
               </h3>
-              <p style={{ color: '#B4C4D6', fontSize: '1rem', lineHeight: 1.6, marginBottom: '2rem' }}>
+              <p style={{ color: '#D4CED1', fontSize: '1rem', lineHeight: 1.6, marginBottom: '2rem' }}>
                 No matter your sector or geography, Pro17Analytics brings practical technical execution across our delivery hubs in the USA, Canada, India, and Singapore.
               </p>
               <div style={{ display: 'flex', gap: '1rem' }}>
@@ -147,11 +147,11 @@ export default function IndustriesPage({ onNavigate, onOpenContact }) {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
               {BRAND_INFO.deliveryImpacts.map((imp) => (
-                <div key={imp.title} style={{ backgroundColor: '#102C4E', border: '1px solid #1F426F', padding: '1.25rem', borderRadius: '10px' }}>
+                <div key={imp.title} style={{ backgroundColor: '#3A3336', border: '1px solid #4D4548', padding: '1.25rem', borderRadius: '10px' }}>
                   <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.3rem' }}>
                     {imp.title}
                   </div>
-                  <div style={{ fontSize: '0.8rem', color: '#88A3BF', lineHeight: 1.4 }}>
+                  <div style={{ fontSize: '0.8rem', color: '#C2BCBE', lineHeight: 1.4 }}>
                     {imp.desc}
                   </div>
                 </div>

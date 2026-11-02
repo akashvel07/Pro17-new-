@@ -28,7 +28,7 @@ export default function Footer({ onNavigate, onOpenContact }) {
             <div style={{ marginBottom: '1.25rem' }}>
               <ProLogo variant="dark" size="default" />
             </div>
-            <p style={{ color: '#A0B2C6', fontSize: '0.925rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+            <p style={{ color: '#C2BCBE', fontSize: '0.925rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
               {BRAND_INFO.description}
             </p>
             <div
@@ -37,7 +37,7 @@ export default function Footer({ onNavigate, onOpenContact }) {
                 borderLeft: '2px solid #981B25',
                 paddingLeft: '0.75rem',
                 fontSize: '0.825rem',
-                color: '#CBD5E1',
+                color: '#DCD6D8',
                 fontWeight: 600,
                 fontStyle: 'italic'
               }}
@@ -117,7 +117,7 @@ export default function Footer({ onNavigate, onOpenContact }) {
             </ul>
 
             <h4>Global Delivery</h4>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#CBD5E1', fontSize: '0.85rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#DCD6D8', fontSize: '0.85rem' }}>
               <MapPin size={16} color="#981B25" />
               <span>{BRAND_INFO.globalLocations.join(' · ')}</span>
             </div>
@@ -169,7 +169,7 @@ export default function Footer({ onNavigate, onOpenContact }) {
             justifyContent: 'space-between',
             gap: '1rem',
             fontSize: '0.85rem',
-            color: '#A0B2C6'
+            color: '#C2BCBE'
           }}
         >
           <div>
@@ -195,7 +195,7 @@ export default function Footer({ onNavigate, onOpenContact }) {
             justifyContent: 'space-between',
             gap: '1rem',
             fontSize: '0.8rem',
-            color: '#7E91A8'
+            color: '#9C9498'
           }}
         >
           <div>

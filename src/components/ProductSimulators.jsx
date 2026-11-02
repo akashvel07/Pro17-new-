@@ -27,21 +27,21 @@ export function BinaraIQDemo() {
   ];
 
   return (
-    <div style={{ backgroundColor: '#07172B', borderRadius: '14px', border: '1px solid #1E3A5F', overflow: 'hidden', color: '#FFFFFF', fontSize: '0.875rem' }}>
+    <div style={{ backgroundColor: '#1E1A1B', borderRadius: '14px', border: '1px solid #3F373A', overflow: 'hidden', color: '#FFFFFF', fontSize: '0.875rem' }}>
       {/* Console Top Bar */}
-      <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid #1E3A5F', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#0B2340' }}>
+      <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid #3F373A', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#2D282A' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <div style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981', boxShadow: '0 0 8px #10B981' }}></div>
-          <span style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', color: '#DCEEF5' }}>BINARAIQ™ LIVE ASSET RADAR</span>
+          <span style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', color: '#EDE8EA' }}>BINARAIQ™ LIVE ASSET RADAR</span>
         </div>
-        <div style={{ fontSize: '0.75rem', color: '#7E9BB8', display: 'flex', gap: '0.75rem' }}>
+        <div style={{ fontSize: '0.75rem', color: '#A8A0A3', display: 'flex', gap: '0.75rem' }}>
           <span>Protocol: UHF / BLE / QR</span>
           <span>Status: 100% Synced</span>
         </div>
       </div>
 
       {/* Asset Switcher */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', borderBottom: '1px solid #1E3A5F', backgroundColor: '#091E36' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', borderBottom: '1px solid #3F373A', backgroundColor: '#252022' }}>
         {assets.map((asset, idx) => (
           <button
             key={asset.id}
@@ -49,10 +49,10 @@ export function BinaraIQDemo() {
             style={{
               padding: '0.65rem 0.5rem',
               textAlign: 'center',
-              background: activeAsset === idx ? '#102C4E' : 'transparent',
+              background: activeAsset === idx ? '#3A3336' : 'transparent',
               border: 'none',
               borderBottom: activeAsset === idx ? '2px solid #981B25' : 'none',
-              color: activeAsset === idx ? '#FFFFFF' : '#88A3BF',
+              color: activeAsset === idx ? '#FFFFFF' : '#A8A0A3',
               fontSize: '0.75rem',
               fontWeight: 600,
               cursor: 'pointer'
@@ -68,7 +68,7 @@ export function BinaraIQDemo() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
           <div>
             <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF' }}>{assets[activeAsset].name}</div>
-            <div style={{ fontSize: '0.75rem', color: '#88A3BF', marginTop: '2px' }}>{assets[activeAsset].type} · {assets[activeAsset].location}</div>
+            <div style={{ fontSize: '0.75rem', color: '#A8A0A3', marginTop: '2px' }}>{assets[activeAsset].type} · {assets[activeAsset].location}</div>
           </div>
           <span style={{ backgroundColor: 'rgba(16, 185, 129, 0.15)', color: '#10B981', border: '1px solid #10B981', padding: '0.2rem 0.6rem', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 700 }}>
             {assets[activeAsset].status}
@@ -77,16 +77,16 @@ export function BinaraIQDemo() {
 
         {/* Telemetry Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem' }}>
-          <div style={{ backgroundColor: '#0B2340', padding: '0.75rem', borderRadius: '8px', border: '1px solid #16365C' }}>
-            <div style={{ fontSize: '0.7rem', color: '#7E9BB8' }}>Signal Type</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 700, marginTop: '2px', color: '#DCEEF5' }}>{assets[activeAsset].signal}</div>
+          <div style={{ backgroundColor: '#2D282A', padding: '0.75rem', borderRadius: '8px', border: '1px solid #3F373A' }}>
+            <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Signal Type</div>
+            <div style={{ fontSize: '0.9rem', fontWeight: 700, marginTop: '2px', color: '#EDE8EA' }}>{assets[activeAsset].signal}</div>
           </div>
-          <div style={{ backgroundColor: '#0B2340', padding: '0.75rem', borderRadius: '8px', border: '1px solid #16365C' }}>
-            <div style={{ fontSize: '0.7rem', color: '#7E9BB8' }}>Sensor Reading</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 700, marginTop: '2px', color: '#DCEEF5' }}>{assets[activeAsset].temp}</div>
+          <div style={{ backgroundColor: '#2D282A', padding: '0.75rem', borderRadius: '8px', border: '1px solid #3F373A' }}>
+            <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Sensor Reading</div>
+            <div style={{ fontSize: '0.9rem', fontWeight: 700, marginTop: '2px', color: '#EDE8EA' }}>{assets[activeAsset].temp}</div>
           </div>
-          <div style={{ backgroundColor: '#0B2340', padding: '0.75rem', borderRadius: '8px', border: '1px solid #16365C' }}>
-            <div style={{ fontSize: '0.7rem', color: '#7E9BB8' }}>Battery Health</div>
+          <div style={{ backgroundColor: '#2D282A', padding: '0.75rem', borderRadius: '8px', border: '1px solid #3F373A' }}>
+            <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Battery Health</div>
             <div style={{ fontSize: '0.9rem', fontWeight: 700, marginTop: '2px', color: '#10B981' }}>{assets[activeAsset].battery}</div>
           </div>
         </div>
@@ -105,11 +105,11 @@ export function ProNexaIQDemo() {
   const [activeTab, setActiveTab] = useState('quality');
 
   return (
-    <div style={{ backgroundColor: '#07172B', borderRadius: '14px', border: '1px solid #1E3A5F', overflow: 'hidden', color: '#FFFFFF', fontSize: '0.875rem' }}>
-      <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid #1E3A5F', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#0B2340' }}>
+    <div style={{ backgroundColor: '#1E1A1B', borderRadius: '14px', border: '1px solid #3F373A', overflow: 'hidden', color: '#FFFFFF', fontSize: '0.875rem' }}>
+      <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid #3F373A', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#2D282A' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <Cpu size={16} color="#00A4EF" />
-          <span style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', color: '#DCEEF5' }}>PRONEXAIQ™ DATA CONTROL TOWER</span>
+          <span style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', color: '#EDE8EA' }}>PRONEXAIQ™ DATA CONTROL TOWER</span>
         </div>
         <span style={{ fontSize: '0.75rem', color: '#10B981', fontWeight: 600 }}>● Pipelines Healthy</span>
       </div>
@@ -117,48 +117,48 @@ export function ProNexaIQDemo() {
       <div style={{ padding: '1.25rem' }}>
         {/* Control Tower Architecture Pipeline */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0.5rem', marginBottom: '1.25rem', textAlign: 'center' }}>
-          <div style={{ backgroundColor: '#0B2340', border: '1px solid #1F426F', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.68rem', color: '#88A3BF' }}>01 CONNECT</div>
+          <div style={{ backgroundColor: '#2D282A', border: '1px solid #40383B', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.68rem', color: '#A8A0A3' }}>01 CONNECT</div>
             <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>14 Connectors</div>
           </div>
-          <div style={{ backgroundColor: '#0B2340', border: '1px solid #1F426F', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.68rem', color: '#88A3BF' }}>02 GOVERN</div>
+          <div style={{ backgroundColor: '#2D282A', border: '1px solid #40383B', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.68rem', color: '#A8A0A3' }}>02 GOVERN</div>
             <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#00A4EF', marginTop: '2px' }}>Catalog &amp; RBAC</div>
           </div>
-          <div style={{ backgroundColor: '#0B2340', border: '1px solid #1F426F', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.68rem', color: '#88A3BF' }}>03 OBSERVE</div>
+          <div style={{ backgroundColor: '#2D282A', border: '1px solid #40383B', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.68rem', color: '#A8A0A3' }}>03 OBSERVE</div>
             <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#10B981', marginTop: '2px' }}>99.8% Quality</div>
           </div>
-          <div style={{ backgroundColor: '#0B2340', border: '1px solid #1F426F', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.68rem', color: '#88A3BF' }}>04 ACT</div>
+          <div style={{ backgroundColor: '#2D282A', border: '1px solid #40383B', padding: '0.6rem 0.4rem', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.68rem', color: '#A8A0A3' }}>04 ACT</div>
             <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#981B25', marginTop: '2px' }}>Auto-Dispatch</div>
           </div>
         </div>
 
         {/* Live Observability Matrix */}
-        <div style={{ backgroundColor: '#091E36', borderRadius: '8px', padding: '1rem', border: '1px solid #16365C' }}>
+        <div style={{ backgroundColor: '#252022', borderRadius: '8px', padding: '1rem', border: '1px solid #3F373A' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-            <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#DCEEF5' }}>AI-Ready Data Assets</span>
-            <span style={{ fontSize: '0.7rem', color: '#7E9BB8' }}>Auto-validated across 24 rules</span>
+            <span style={{ fontSize: '0.8rem', fontWeight: 600, color: '#EDE8EA' }}>AI-Ready Data Assets</span>
+            <span style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Auto-validated across 24 rules</span>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', marginBottom: '0.2rem' }}>
-                <span style={{ color: '#B4C4D6' }}>Customer 360 Feature Store</span>
+                <span style={{ color: '#D0C9CC' }}>Customer 360 Feature Store</span>
                 <span style={{ color: '#10B981', fontWeight: 600 }}>100% Integrity</span>
               </div>
-              <div style={{ width: '100%', height: '5px', backgroundColor: '#102C4E', borderRadius: '3px', overflow: 'hidden' }}>
+              <div style={{ width: '100%', height: '5px', backgroundColor: '#3A3336', borderRadius: '3px', overflow: 'hidden' }}>
                 <div style={{ width: '100%', height: '100%', backgroundColor: '#10B981' }}></div>
               </div>
             </div>
 
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', marginBottom: '0.2rem' }}>
-                <span style={{ color: '#B4C4D6' }}>Enterprise Financial Ledgers</span>
+                <span style={{ color: '#D0C9CC' }}>Enterprise Financial Ledgers</span>
                 <span style={{ color: '#00A4EF', fontWeight: 600 }}>99.8% Verified</span>
               </div>
-              <div style={{ width: '100%', height: '5px', backgroundColor: '#102C4E', borderRadius: '3px', overflow: 'hidden' }}>
+              <div style={{ width: '100%', height: '5px', backgroundColor: '#3A3336', borderRadius: '3px', overflow: 'hidden' }}>
                 <div style={{ width: '99.8%', height: '100%', backgroundColor: '#00A4EF' }}></div>
               </div>
             </div>
@@ -178,9 +178,9 @@ export function EduceERPDemo() {
       {/* Top Header */}
       <div style={{ padding: '0.85rem 1.25rem', borderBottom: '1px solid #E7E5E3', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#F6F4F2' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <div style={{ width: '24px', height: '24px', borderRadius: '6px', backgroundColor: '#0B2340', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.75rem' }}>e</div>
+          <div style={{ width: '24px', height: '24px', borderRadius: '6px', backgroundColor: '#2D282A', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.75rem' }}>e</div>
           <div>
-            <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#0B2340' }}>Educe ERP</div>
+            <div style={{ fontWeight: 700, fontSize: '0.85rem', color: '#2D282A' }}>Educe ERP</div>
             <div style={{ fontSize: '0.65rem', color: '#6B6B70' }}>Intelligent Business Management</div>
           </div>
         </div>
@@ -221,12 +221,12 @@ export function EduceERPDemo() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.75rem', marginBottom: '1rem' }}>
               <div style={{ padding: '0.75rem', backgroundColor: '#F6F4F2', borderRadius: '8px' }}>
                 <div style={{ fontSize: '0.7rem', color: '#6B6B70' }}>Monthly Revenue Run-Rate</div>
-                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#0B2340', marginTop: '2px' }}>$1,420,800</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#2D282A', marginTop: '2px' }}>$1,420,800</div>
                 <div style={{ fontSize: '0.68rem', color: '#059669', fontWeight: 600, marginTop: '2px' }}>+12.4% vs budget</div>
               </div>
               <div style={{ padding: '0.75rem', backgroundColor: '#F6F4F2', borderRadius: '8px' }}>
                 <div style={{ fontSize: '0.7rem', color: '#6B6B70' }}>Days Sales Outstanding (DSO)</div>
-                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#0B2340', marginTop: '2px' }}>34 Days</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#2D282A', marginTop: '2px' }}>34 Days</div>
                 <div style={{ fontSize: '0.68rem', color: '#059669', fontWeight: 600, marginTop: '2px' }}>-6 Days improvement</div>
               </div>
             </div>
@@ -258,7 +258,7 @@ export function EduceERPDemo() {
             <div style={{ padding: '0.75rem', backgroundColor: '#F6F4F2', borderRadius: '8px', marginBottom: '0.75rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', fontWeight: 600 }}>
                 <span>Inventory Turn Ratio</span>
-                <span style={{ color: '#0B2340' }}>6.2x</span>
+                <span style={{ color: '#2D282A' }}>6.2x</span>
               </div>
               <div style={{ fontSize: '0.7rem', color: '#6B6B70', marginTop: '0.2rem' }}>Automated purchase re-orders trigger at dynamic minimum safety thresholds.</div>
             </div>
@@ -293,19 +293,19 @@ export function ProSageIQDemo() {
   ];
 
   return (
-    <div style={{ backgroundColor: '#07172B', borderRadius: '14px', border: '1px solid #1E3A5F', overflow: 'hidden', color: '#FFFFFF', fontSize: '0.875rem' }}>
-      <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid #1E3A5F', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#0B2340' }}>
+    <div style={{ backgroundColor: '#1E1A1B', borderRadius: '14px', border: '1px solid #3F373A', overflow: 'hidden', color: '#FFFFFF', fontSize: '0.875rem' }}>
+      <div style={{ padding: '0.75rem 1rem', borderBottom: '1px solid #3F373A', display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#2D282A' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <Sparkles size={16} color="#981B25" />
-          <span style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', color: '#DCEEF5' }}>PROSAGEIQ™ ENTERPRISE COPILOT</span>
+          <span style={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.05em', color: '#EDE8EA' }}>PROSAGEIQ™ ENTERPRISE COPILOT</span>
         </div>
-        <span style={{ fontSize: '0.75rem', color: '#88A3BF' }}>Natural Language Query</span>
+        <span style={{ fontSize: '0.75rem', color: '#A8A0A3' }}>Natural Language Query</span>
       </div>
 
       <div style={{ padding: '1.25rem' }}>
         {/* Sample Prompt Selector */}
         <div style={{ marginBottom: '1rem' }}>
-          <div style={{ fontSize: '0.72rem', color: '#88A3BF', marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          <div style={{ fontSize: '0.72rem', color: '#A8A0A3', marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
             Click an enterprise question to test:
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
@@ -317,9 +317,9 @@ export function ProSageIQDemo() {
                   textAlign: 'left',
                   padding: '0.55rem 0.75rem',
                   borderRadius: '6px',
-                  backgroundColor: selectedPrompt === idx ? '#102C4E' : '#0B2340',
-                  border: `1px solid ${selectedPrompt === idx ? '#00A4EF' : '#1F3856'}`,
-                  color: selectedPrompt === idx ? '#FFFFFF' : '#B4C4D6',
+                  backgroundColor: selectedPrompt === idx ? '#3A3336' : '#2D282A',
+                  border: `1px solid ${selectedPrompt === idx ? '#981B25' : '#3F373A'}`,
+                  color: selectedPrompt === idx ? '#FFFFFF' : '#D0C9CC',
                   fontSize: '0.75rem',
                   cursor: 'pointer',
                   display: 'flex',
@@ -327,7 +327,7 @@ export function ProSageIQDemo() {
                   gap: '0.5rem'
                 }}
               >
-                <Search size={12} color={selectedPrompt === idx ? '#00A4EF' : '#7E9BB8'} />
+                <Search size={12} color={selectedPrompt === idx ? '#FFFFFF' : '#A8A0A3'} />
                 <span>"{p.q}"</span>
               </button>
             ))}
@@ -335,14 +335,14 @@ export function ProSageIQDemo() {
         </div>
 
         {/* Simulated Conversational Response */}
-        <div style={{ backgroundColor: '#091E36', borderRadius: '8px', padding: '1rem', border: '1px solid #16365C' }}>
+        <div style={{ backgroundColor: '#252022', borderRadius: '8px', padding: '1rem', border: '1px solid #3F373A' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
             <div style={{ width: '18px', height: '18px', borderRadius: '4px', backgroundColor: '#981B25', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <Sparkles size={11} color="#FFFFFF" />
             </div>
-            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#DCEEF5' }}>ProSageIQ Response:</span>
+            <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#EDE8EA' }}>ProSageIQ Response:</span>
           </div>
-          <p style={{ fontSize: '0.8rem', color: '#CBD5E1', lineHeight: 1.5, whiteSpace: 'pre-line' }}>
+          <p style={{ fontSize: '0.8rem', color: '#DCD6D8', lineHeight: 1.5, whiteSpace: 'pre-line' }}>
             {prompts[selectedPrompt].a}
           </p>
         </div>

@@ -11,20 +11,27 @@
   --color-primary-red-light: rgba(152, 27, 37, 0.08);
   --color-primary-red-glow: rgba(152, 27, 37, 0.2);
 
-  --color-navy: #0B2340;
-  --color-navy-dark: #07172B;
-  --color-navy-surface: #102C4E;
-  --color-navy-subtle: rgba(11, 35, 64, 0.05);
+  /* Logo Brand Black Tokens (Derived from #2D282A in official pro17-logo.png) */
+  --color-logo-black: #2D282A;
+  --color-logo-black-dark: #1C1819;
+  --color-logo-black-surface: #3E373A;
+  --color-logo-black-subtle: rgba(45, 40, 42, 0.05);
 
-  --color-charcoal: #242326;
+  /* Navy aliases mapped directly to logo black for complete site-wide consistency */
+  --color-navy: #2D282A;
+  --color-navy-dark: #1C1819;
+  --color-navy-surface: #3E373A;
+  --color-navy-subtle: rgba(45, 40, 42, 0.05);
+
+  --color-charcoal: #2D282A;
   --color-white: #FFFFFF;
-  --color-warm-gray: #F6F4F2;
-  --color-warm-gray-hover: #ECE9E5;
-  --color-pale-blue: #DCEEF5;
-  --color-pale-blue-subtle: #F1F8FA;
-  --color-muted-gray: #6B6B70;
-  --color-border-gray: #E7E5E3;
-  --color-border-dark: #1F3856;
+  --color-warm-gray: #F7F5F4;
+  --color-warm-gray-hover: #ECE8E7;
+  --color-pale-blue: #EFECEC;
+  --color-pale-blue-subtle: #F6F4F4;
+  --color-muted-gray: #6E686A;
+  --color-border-gray: #E5E1E2;
+  --color-border-dark: #3F383B;
 
   /* Typography */
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -42,8 +49,8 @@
   --radius-full: 9999px;
 
   --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
-  --shadow-card: 0 10px 30px rgba(11, 35, 64, 0.06);
-  --shadow-hover: 0 18px 45px rgba(11, 35, 64, 0.1);
+  --shadow-card: 0 10px 30px rgba(45, 40, 42, 0.06);
+  --shadow-hover: 0 18px 45px rgba(45, 40, 42, 0.12);
 
   /* Transitions */
   --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
@@ -163,8 +170,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary-red);
 }
 
-.text-navy {
-  color: var(--color-navy);
+.text-navy,
+.text-logo-black {
+  color: var(--color-logo-black);
 }
 
 /* Container & Layout Utilities */
@@ -190,17 +198,20 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-warm-gray);
 }
 
-.bg-navy {
-  background-color: var(--color-navy);
+.bg-navy,
+.bg-logo-black {
+  background-color: var(--color-logo-black);
   color: var(--color-white);
 }
 
-.bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4 {
+.bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4,
+.bg-logo-black h1, .bg-logo-black h2, .bg-logo-black h3, .bg-logo-black h4 {
   color: var(--color-white);
 }
 
-.bg-navy p, .bg-navy .body-normal, .bg-navy .body-large {
-  color: #B4C4D6;
+.bg-navy p, .bg-navy .body-normal, .bg-navy .body-large,
+.bg-logo-black p, .bg-logo-black .body-normal, .bg-logo-black .body-large {
+  color: #D4CED1;
 }
 
 /* Button & Action Components */
@@ -236,26 +247,28 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-white);
 }
 
-.btn-navy {
-  background-color: var(--color-navy);
+.btn-navy,
+.btn-logo-black {
+  background-color: var(--color-logo-black);
   color: var(--color-white);
 }
 
-.btn-navy:hover {
-  background-color: var(--color-navy-surface);
+.btn-navy:hover,
+.btn-logo-black:hover {
+  background-color: var(--color-logo-black-surface);
   transform: translateY(-2px);
   color: var(--color-white);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: var(--color-navy);
+  color: var(--color-logo-black);
   border: 1.5px solid var(--color-border-gray);
 }
 
 .btn-outline:hover {
-  border-color: var(--color-navy);
-  background-color: rgba(11, 35, 64, 0.04);
+  border-color: var(--color-logo-black);
+  background-color: rgba(45, 40, 42, 0.05);
   transform: translateY(-2px);
 }
 
@@ -399,7 +412,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-drawer-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(11, 35, 64, 0.5);
+  background-color: rgba(45, 40, 42, 0.6);
   backdrop-filter: blur(4px);
   z-index: 998;
   opacity: 0;
@@ -458,9 +471,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .product-card-featured {
-  background: linear-gradient(135deg, #0B2340 0%, #0F325C 100%);
+  background: linear-gradient(135deg, #2D282A 0%, #3F373A 100%);
   color: var(--color-white);
-  border-color: #1F426F;
+  border-color: #4A4245;
 }
 
 .product-card-featured h3, .product-card-featured p {
@@ -581,8 +594,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 .site-footer {
-  background-color: var(--color-navy-dark);
-  color: #9FB1C7;
+  background-color: var(--color-logo-black-dark);
+  color: #B5ADB1;
   border-top: 1px solid var(--color-border-dark);
 }
 

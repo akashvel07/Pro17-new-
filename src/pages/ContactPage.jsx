@@ -85,7 +85,7 @@ export default function ContactPage() {
         <div className="site-container">
           <div style={{ maxWidth: '780px' }}>
             <span className="label-eyebrow">Contact &amp; Engagement</span>
-            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#0B2340' }}>
+            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#2D282A' }}>
               Let’s Build <span className="text-red">What’s Next.</span>
             </h1>
             <p className="body-large">
@@ -108,21 +108,21 @@ export default function ContactPage() {
           >
             {/* Left: Contact Info & Delivery Channels */}
             <div>
-              <div style={{ backgroundColor: '#0B2340', borderRadius: '16px', padding: '2.5rem', color: '#FFFFFF', marginBottom: '2rem' }}>
+              <div style={{ backgroundColor: '#2D282A', borderRadius: '16px', padding: '2.5rem', color: '#FFFFFF', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.5rem', color: '#FFFFFF', marginBottom: '1rem', fontWeight: 700 }}>
                   Direct Contact
                 </h3>
-                <p style={{ color: '#B4C4D6', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '2rem' }}>
+                <p style={{ color: '#D4CED1', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '2rem' }}>
                   Our solution architects and engineering leads are available to assist with solution scoping, capability assessments, and product demonstrations.
                 </p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '8px', backgroundColor: '#102C4E', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <div style={{ width: '40px', height: '40px', borderRadius: '8px', backgroundColor: '#3E373A', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Mail size={18} color="#981B25" />
                     </div>
                     <div>
-                      <div style={{ fontSize: '0.75rem', color: '#88A3BF', textTransform: 'uppercase' }}>Email Inquiry</div>
+                      <div style={{ fontSize: '0.75rem', color: '#C2BCBE', textTransform: 'uppercase' }}>Email Inquiry</div>
                       <a href={`mailto:${BRAND_INFO.contactEmail}`} style={{ color: '#FFFFFF', fontWeight: 600, fontSize: '1rem' }}>
                         {BRAND_INFO.contactEmail}
                       </a>
@@ -130,11 +130,11 @@ export default function ContactPage() {
                   </div>
 
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                    <div style={{ width: '40px', height: '40px', borderRadius: '8px', backgroundColor: '#102C4E', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <div style={{ width: '40px', height: '40px', borderRadius: '8px', backgroundColor: '#3E373A', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Globe size={18} color="#00A4EF" />
                     </div>
                     <div>
-                      <div style={{ fontSize: '0.75rem', color: '#88A3BF', textTransform: 'uppercase' }}>Official Portal</div>
+                      <div style={{ fontSize: '0.75rem', color: '#C2BCBE', textTransform: 'uppercase' }}>Official Portal</div>
                       <a href={`https://${BRAND_INFO.website}`} target="_blank" rel="noopener noreferrer" style={{ color: '#FFFFFF', fontWeight: 600, fontSize: '1rem' }}>
                         {BRAND_INFO.website}
                       </a>
@@ -145,7 +145,7 @@ export default function ContactPage() {
 
               {/* Global Delivery Hubs */}
               <div style={{ backgroundColor: '#FFFFFF', borderRadius: '16px', padding: '2rem', border: '1px solid #E7E5E3' }}>
-                <h4 style={{ fontSize: '1.15rem', color: '#0B2340', marginBottom: '0.75rem', fontWeight: 700 }}>
+                <h4 style={{ fontSize: '1.15rem', color: '#2D282A', marginBottom: '0.75rem', fontWeight: 700 }}>
                   Global Delivery Presence
                 </h4>
                 <p style={{ fontSize: '0.875rem', color: '#6B6B70', marginBottom: '1.25rem' }}>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                   {BRAND_INFO.globalLocations.map((loc) => (
                     <div key={loc} style={{ padding: '0.75rem', backgroundColor: '#F6F4F2', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <MapPin size={15} color="#981B25" />
-                      <span style={{ fontWeight: 600, color: '#0B2340', fontSize: '0.9rem' }}>{loc}</span>
+                      <span style={{ fontWeight: 600, color: '#2D282A', fontSize: '0.9rem' }}>{loc}</span>
                     </div>
                   ))}
                 </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
                   >
                     <CheckCircle size={36} />
                   </div>
-                  <h3 style={{ fontSize: '1.5rem', color: '#0B2340', marginBottom: '0.75rem' }}>
+                  <h3 style={{ fontSize: '1.5rem', color: '#2D282A', marginBottom: '0.75rem' }}>
                     Inquiry Received Successfully
                   </h3>
                   <p style={{ color: '#6B6B70', fontSize: '1rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
@@ -204,7 +204,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate>
-                  <h3 style={{ fontSize: '1.5rem', color: '#0B2340', marginBottom: '0.35rem', fontWeight: 700 }}>
+                  <h3 style={{ fontSize: '1.5rem', color: '#2D282A', marginBottom: '0.35rem', fontWeight: 700 }}>
                     Start a Conversation
                   </h3>
                   <p style={{ fontSize: '0.9rem', color: '#6B6B70', marginBottom: '1.75rem' }}>
@@ -335,7 +335,7 @@ export default function ContactPage() {
         <div className="site-container">
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 2.5rem' }}>
             <span className="label-eyebrow">Enterprise Credentials</span>
-            <h3 style={{ fontSize: '1.65rem', color: '#0B2340', marginTop: '0.5rem', marginBottom: '0.5rem' }}>
+            <h3 style={{ fontSize: '1.65rem', color: '#2D282A', marginTop: '0.5rem', marginBottom: '0.5rem' }}>
               Verified Partner &amp; Compliance Standards
             </h3>
             <p style={{ color: '#6B6B70', fontSize: '0.9rem' }}>

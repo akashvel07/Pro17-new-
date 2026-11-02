@@ -32,7 +32,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
         <div className="site-container">
           <div style={{ maxWidth: '820px' }}>
             <span className="label-eyebrow">Enterprise Products &amp; Platforms</span>
-            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#0B2340' }}>
+            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#2D282A' }}>
               Built Through <span className="text-red">Real Delivery.</span>
             </h1>
             <p className="body-large">
@@ -61,13 +61,13 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
                 style={{
                   padding: '1.25rem',
                   borderRadius: '12px',
-                  backgroundColor: activeProductTab === idx ? '#0B2340' : '#FFFFFF',
-                  color: activeProductTab === idx ? '#FFFFFF' : '#0B2340',
-                  border: `1.5px solid ${activeProductTab === idx ? '#0B2340' : '#E7E5E3'}`,
+                  backgroundColor: activeProductTab === idx ? '#2D282A' : '#FFFFFF',
+                  color: activeProductTab === idx ? '#FFFFFF' : '#2D282A',
+                  border: `1.5px solid ${activeProductTab === idx ? '#2D282A' : '#E7E5E3'}`,
                   textAlign: 'left',
                   cursor: 'pointer',
                   transition: 'all 0.2s ease',
-                  boxShadow: activeProductTab === idx ? '0 10px 25px rgba(11, 35, 64, 0.15)' : 'none'
+                  boxShadow: activeProductTab === idx ? '0 10px 25px rgba(45, 40, 42, 0.18)' : 'none'
                 }}
               >
                 <div style={{ fontSize: '0.75rem', fontWeight: 700, color: activeProductTab === idx ? '#F87171' : '#981B25', marginBottom: '0.25rem' }}>
@@ -115,7 +115,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
                       )}
                     </div>
 
-                    <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: 800, color: '#0B2340', marginBottom: '0.25rem' }}>
+                    <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', fontWeight: 800, color: '#2D282A', marginBottom: '0.25rem' }}>
                       {product.name}
                     </h2>
                     <div style={{ fontSize: '1.1rem', fontWeight: 600, color: '#981B25', fontStyle: 'italic', marginBottom: '1.25rem' }}>
@@ -135,7 +135,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
                         {product.capabilities.map((cap) => (
                           <div key={cap} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                             <CheckCircle size={18} color="#981B25" />
-                            <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#0B2340' }}>{cap}</span>
+                            <span style={{ fontSize: '0.95rem', fontWeight: 600, color: '#2D282A' }}>{cap}</span>
                           </div>
                         ))}
                       </div>
@@ -184,7 +184,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
         <div className="site-container">
           <div style={{ maxWidth: '680px', marginBottom: '3.5rem' }}>
             <span className="label-eyebrow">Product Catalog</span>
-            <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1rem', color: '#0B2340' }}>
+            <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1rem', color: '#2D282A' }}>
               All 4 Specialized Platforms
             </h2>
             <p className="body-large">
@@ -203,7 +203,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
               <div key={prod.id} className="editorial-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <span className="pill-badge" style={{ marginBottom: '0.75rem' }}>{prod.badge}</span>
-                  <h3 style={{ fontSize: '1.45rem', color: '#0B2340', marginBottom: '0.25rem' }}>
+                  <h3 style={{ fontSize: '1.45rem', color: '#2D282A', marginBottom: '0.25rem' }}>
                     {prod.name}
                   </h3>
                   <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#981B25', marginBottom: '0.85rem' }}>
@@ -219,7 +219,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
                     </div>
                     <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                       {prod.capabilities.map((c) => (
-                        <li key={c} style={{ fontSize: '0.825rem', color: '#0B2340', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <li key={c} style={{ fontSize: '0.825rem', color: '#2D282A', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                           <CheckCircle size={13} color="#981B25" />
                           <span>{c}</span>
                         </li>
@@ -259,7 +259,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
         <div className="site-container">
           <div style={{ maxWidth: '680px', marginBottom: '3rem' }}>
             <span className="label-eyebrow">Complementary Offerings</span>
-            <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1rem', color: '#0B2340' }}>
+            <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1rem', color: '#2D282A' }}>
               Also Available
             </h2>
             <p className="body-large">
@@ -270,7 +270,7 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
             {ALSO_AVAILABLE.map((item) => (
               <div key={item.title} className="editorial-card" style={{ padding: '2rem' }}>
-                <h3 style={{ fontSize: '1.35rem', color: '#0B2340', marginBottom: '0.75rem' }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#2D282A', marginBottom: '0.75rem' }}>
                   {item.title}
                 </h3>
                 <p className="body-normal" style={{ fontSize: '0.925rem', marginBottom: '1.5rem' }}>

@@ -106,7 +106,7 @@ export default function Header({ currentRoute, onNavigate, onOpenContact }) {
             <button
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close mobile menu"
-              style={{ color: '#0B2340', padding: '0.4rem' }}
+              style={{ color: '#2D282A', padding: '0.4rem' }}
             >
               <X size={24} />
             </button>
@@ -124,7 +124,7 @@ export default function Header({ currentRoute, onNavigate, onOpenContact }) {
                   style={{
                     fontSize: '1.15rem',
                     fontWeight: currentRoute === item.id ? 700 : 500,
-                    color: currentRoute === item.id ? '#981B25' : '#0B2340',
+                    color: currentRoute === item.id ? '#981B25' : '#2D282A',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
@@ -145,7 +145,7 @@ export default function Header({ currentRoute, onNavigate, onOpenContact }) {
 
         <div>
           <div style={{ padding: '1rem', backgroundColor: '#F6F4F2', borderRadius: '8px', marginBottom: '1rem', fontSize: '0.85rem' }}>
-            <div style={{ fontWeight: 600, color: '#0B2340', marginBottom: '0.2rem' }}>Direct Inquiries</div>
+            <div style={{ fontWeight: 600, color: '#2D282A', marginBottom: '0.2rem' }}>Direct Inquiries</div>
             <a href="mailto:sales@pro17analytics.com" style={{ color: '#981B25' }}>sales@pro17analytics.com</a>
           </div>
 

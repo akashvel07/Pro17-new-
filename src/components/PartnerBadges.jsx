@@ -10,10 +10,10 @@ import React from 'react';
  * - GDPR Compliant
  */
 export default function PartnerBadges({ isDark = false }) {
-  const badgeBg = isDark ? '#102C4E' : '#FFFFFF';
-  const borderColor = isDark ? '#1F3856' : '#E7E5E3';
-  const textColor = isDark ? '#FFFFFF' : '#0B2340';
-  const subTextColor = isDark ? '#9FB1C7' : '#6B6B70';
+  const badgeBg = isDark ? '#383235' : '#FFFFFF';
+  const borderColor = isDark ? '#4A4346' : '#E7E5E3';
+  const textColor = isDark ? '#FFFFFF' : '#2D282A';
+  const subTextColor = isDark ? '#C7C1C4' : '#6B6B70';
 
   return (
     <div style={{ width: '100%' }}>

@@ -33,7 +33,7 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
         <div className="site-container">
           <div style={{ maxWidth: '800px' }}>
             <span className="label-eyebrow">Enterprise Capabilities</span>
-            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#0B2340' }}>
+            <h1 className="display-title" style={{ marginTop: '0.75rem', marginBottom: '1.25rem', color: '#2D282A' }}>
               Engineered for <span className="text-red">Real Outcomes.</span>
             </h1>
             <p className="body-large">
@@ -69,8 +69,8 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
                   gap: '0.6rem',
                   padding: '0.75rem 1.25rem',
                   borderRadius: '8px',
-                  backgroundColor: selectedCap === idx ? '#0B2340' : 'transparent',
-                  color: selectedCap === idx ? '#FFFFFF' : '#0B2340',
+                  backgroundColor: selectedCap === idx ? '#2D282A' : 'transparent',
+                  color: selectedCap === idx ? '#FFFFFF' : '#2D282A',
                   border: 'none',
                   fontSize: '0.9rem',
                   fontWeight: 600,
@@ -108,7 +108,7 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
                     <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.75rem' }}>
                       <span className="pill-badge pill-badge-red">{current.positioning}</span>
                     </div>
-                    <h2 style={{ fontSize: 'clamp(1.85rem, 3vw, 2.5rem)', fontWeight: 800, color: '#0B2340', marginBottom: '1rem' }}>
+                    <h2 style={{ fontSize: 'clamp(1.85rem, 3vw, 2.5rem)', fontWeight: 800, color: '#2D282A', marginBottom: '1rem' }}>
                       {current.title}
                     </h2>
                     <p className="body-large" style={{ fontSize: '1.1rem', marginBottom: '2rem' }}>
@@ -130,7 +130,7 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
                               borderRadius: '8px',
                               fontSize: '0.9rem',
                               fontWeight: 600,
-                              color: '#0B2340',
+                              color: '#2D282A',
                               display: 'flex',
                               alignItems: 'center',
                               gap: '0.5rem'
@@ -162,11 +162,11 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
                     </div>
 
                     {/* Potential Business Value */}
-                    <div style={{ backgroundColor: '#F1F8FA', border: '1px solid #D1EAF2', borderRadius: '12px', padding: '1.5rem' }}>
-                      <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#0B2340', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.4rem' }}>
+                    <div style={{ backgroundColor: '#F8F6F7', border: '1px solid #E6E1E3', borderRadius: '12px', padding: '1.5rem' }}>
+                      <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#2D282A', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.4rem' }}>
                         Potential Business Value
                       </div>
-                      <p style={{ fontSize: '0.95rem', color: '#16365C', lineHeight: 1.5 }}>
+                      <p style={{ fontSize: '0.95rem', color: '#3A3437', lineHeight: 1.5 }}>
                         {current.businessValue}
                       </p>
                     </div>
@@ -193,7 +193,7 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
         <div className="site-container">
           <div style={{ maxWidth: '680px', marginBottom: '3.5rem' }}>
             <span className="label-eyebrow">Service Matrix</span>
-            <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1rem', color: '#0B2340' }}>
+            <h2 className="section-title" style={{ marginTop: '0.5rem', marginBottom: '1rem', color: '#2D282A' }}>
               All 5 Core Competencies
             </h2>
             <p className="body-large">
@@ -212,7 +212,7 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
                     <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#981B25' }}>0{idx + 1}</span>
                   </div>
 
-                  <h3 style={{ fontSize: '1.35rem', color: '#0B2340', marginBottom: '0.35rem' }}>
+                  <h3 style={{ fontSize: '1.35rem', color: '#2D282A', marginBottom: '0.35rem' }}>
                     {cap.title}
                   </h3>
                   <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#981B25', marginBottom: '0.75rem' }}>
@@ -228,7 +228,7 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
                     </div>
                     <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
                       {cap.services.map((s) => (
-                        <li key={s} style={{ fontSize: '0.825rem', color: '#0B2340', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <li key={s} style={{ fontSize: '0.825rem', color: '#2D282A', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                           <span style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#981B25' }}></span>
                           <span>{s}</span>
                         </li>
@@ -262,7 +262,7 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
           <p style={{ fontSize: '1.05rem', opacity: 0.9, marginBottom: '2rem', maxWidth: '580px', margin: '0 auto 2rem' }}>
             Discuss your system architecture or planned modernization with our solutions team.
           </p>
-          <button onClick={onOpenContact} className="btn btn-navy" style={{ backgroundColor: '#0B2340', padding: '0.9rem 2.25rem' }}>
+          <button onClick={onOpenContact} className="btn btn-navy" style={{ backgroundColor: '#2D282A', padding: '0.9rem 2.25rem' }}>
             <span>Connect With Our Engineers</span>
             <ArrowRight size={17} />
           </button>

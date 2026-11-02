@@ -53,7 +53,7 @@ export const DELIVERY_STEPS = [
     title: "Understand",
     subtitle: "Business goals, challenges, and opportunities",
     description: "We begin by deeply understanding your operational realities, strategic objectives, and technological constraints before writing code.",
-    color: "#0B2340",
+    color: "#2D282A",
     outcomes: ["Stakeholder Alignment", "Current-State Assessment", "Opportunity Mapping"]
   },
   {
@@ -69,7 +69,7 @@ export const DELIVERY_STEPS = [
     title: "Operate",
     subtitle: "Secure, reliable operations and support",
     description: "Ensuring mission-critical stability, enterprise security compliance, and dependable ongoing managed services.",
-    color: "#1E588A",
+    color: "#4A4245",
     outcomes: ["Reliability & Uptime", "Governance & Security", "Proactive Monitoring"]
   },
   {
@@ -77,7 +77,7 @@ export const DELIVERY_STEPS = [
     title: "Scale",
     subtitle: "Optimize, innovate, and grow",
     description: "Continual refinement, expanding capabilities to new business units, and unlocking deeper AI/automation potential.",
-    color: "#2B82B8",
+    color: "#6E6468",
     outcomes: ["Continuous Optimization", "Ecosystem Expansion", "Measurable Growth"]
   }
 ];

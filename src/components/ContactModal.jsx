@@ -93,7 +93,7 @@ export default function ContactModal({ isOpen, onClose, initialInterest = 'Data 
         alignItems: 'center',
         justifyContent: 'center',
         padding: '1rem',
-        backgroundColor: 'rgba(11, 35, 64, 0.65)',
+        backgroundColor: 'rgba(45, 40, 42, 0.7)',
         backdropFilter: 'blur(6px)'
       }}
       onClick={(e) => {
@@ -126,7 +126,7 @@ export default function ContactModal({ isOpen, onClose, initialInterest = 'Data 
         >
           <div>
             <div className="label-eyebrow" style={{ marginBottom: '0.35rem' }}>Let's Talk</div>
-            <h3 style={{ fontSize: '1.45rem', color: '#0B2340', fontWeight: 700 }}>
+            <h3 style={{ fontSize: '1.45rem', color: '#2D282A', fontWeight: 700 }}>
               Let's Build What's Next
             </h3>
             <p style={{ fontSize: '0.875rem', color: '#6B6B70', marginTop: '0.25rem' }}>
@@ -166,7 +166,7 @@ export default function ContactModal({ isOpen, onClose, initialInterest = 'Data 
               >
                 <CheckCircle size={36} />
               </div>
-              <h4 style={{ fontSize: '1.35rem', color: '#0B2340', marginBottom: '0.5rem' }}>
+              <h4 style={{ fontSize: '1.35rem', color: '#2D282A', marginBottom: '0.5rem' }}>
                 Thank you for reaching out
               </h4>
               <p style={{ color: '#6B6B70', fontSize: '0.95rem', marginBottom: '1.25rem', lineHeight: 1.6 }}>
