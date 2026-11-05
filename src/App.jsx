@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
 import UserCursor from './components/UserCursor';
+import TilesLoader from './components/TilesLoader';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import CapabilitiesPage from './pages/CapabilitiesPage';
@@ -20,6 +21,7 @@ export default function App() {
 
   const [currentRoute, setCurrentRoute] = useState(getInitialRoute);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -42,6 +44,16 @@ export default function App() {
 
   return (
     <div className="app-root" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {/* Editorial Tiles Preloader with Primary Brand Color (#981B25) */}
+      {!isLoaded && (
+        <TilesLoader
+          minTime={1.8}
+          accent="#981B25"
+          background="#FAF9F6"
+          onComplete={() => setIsLoaded(true)}
+        />
+      )}
+
       {/* Interactive Figma/OriginKit-style User Cursor */}
       <UserCursor name="You" color="#981B25" secondaryColor="#2D282A" />
 
