@@ -2,6 +2,9 @@ import React from 'react';
 import { ArrowUpRight, Mail, Globe, MapPin } from 'lucide-react';
 import ProLogo from './ProLogo';
 import { BRAND_INFO, CAPABILITIES, PRODUCTS } from '../data/content';
+import VectorWordmark from './VectorWordmark';
+import SpiderButton from './SpiderButton';
+import Snowfall from './Snowfall';
 
 export default function Footer({ onNavigate, onOpenContact }) {
   const currentYear = new Date().getFullYear();
@@ -12,8 +15,22 @@ export default function Footer({ onNavigate, onOpenContact }) {
   };
 
   return (
-    <footer className="site-footer">
-      <div className="site-container" style={{ paddingTop: '5rem', paddingBottom: '3.5rem' }}>
+    <footer className="site-footer" style={{ position: 'relative', overflow: 'hidden' }}>
+      {/* Background Snowfall Animation */}
+      <Snowfall
+        count={80}
+        speedMin={0.3}
+        speedMax={1.4}
+        sizeMin={0.5}
+        sizeMax={1.5}
+        opacityMin={15}
+        opacityMax={70}
+        wind={0}
+        windVariation={0.5}
+        color="#FFFFFF"
+      />
+
+      <div className="site-container" style={{ position: 'relative', zIndex: 2, paddingTop: '5rem', paddingBottom: '3.5rem' }}>
         {/* Main Footer Grid */}
         <div
           style={{
@@ -145,14 +162,15 @@ export default function Footer({ onNavigate, onOpenContact }) {
               </a>
             </div>
 
-            <button
+            <SpiderButton
               onClick={onOpenContact}
-              className="btn btn-primary"
-              style={{ padding: '0.65rem 1.25rem', fontSize: '0.85rem', width: '100%' }}
+              size={42}
+              style={{ width: '100%' }}
+              buttonStyle={{ width: '100%', padding: '0 1.25rem', fontSize: '0.85rem' }}
             >
               <span>Schedule a Discussion</span>
               <ArrowUpRight size={15} />
-            </button>
+            </SpiderButton>
           </div>
         </div>
 
@@ -184,6 +202,44 @@ export default function Footer({ onNavigate, onOpenContact }) {
             <span>•</span>
             <span>SINGAPORE</span>
           </div>
+        </div>
+
+        {/* Monumental Interactive WebGL Vector Wordmark */}
+        <div
+          style={{
+            margin: '2rem 0 3rem 0',
+            width: '100%',
+            height: 'clamp(180px, 24vw, 300px)',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <VectorWordmark
+            text="PRO17 ANALYTICS"
+            background="transparent"
+            textColor="#FFFFFF"
+            shade="#9E969A"
+            accent="#981B25"
+            reach={380}
+            speed={50}
+            damping={60}
+            font={{
+              fontFamily: "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif",
+              fontWeight: 800,
+              fontSize: '240px',
+              letterSpacing: '-0.025em',
+            }}
+            handles={{
+              size: 110,
+              spread: 28,
+              labels: true,
+            }}
+            style={{
+              width: '100%',
+              height: '100%',
+              minHeight: 'unset',
+            }}
+          />
         </div>
 
         {/* Legal & Copyright */}

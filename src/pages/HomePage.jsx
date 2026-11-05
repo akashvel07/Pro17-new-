@@ -21,7 +21,9 @@ import {
 } from '../data/content';
 import PartnerBadges from '../components/PartnerBadges';
 import { BinaraIQDemo, ProNexaIQDemo, EduceERPDemo, ProSageIQDemo } from '../components/ProductSimulators';
-import { HeroTechConsole, GlobalOperationsMap } from '../components/ProfessionalVisuals';
+import { GlobalOperationsMap } from '../components/ProfessionalVisuals';
+import SpiderButton from '../components/SpiderButton';
+import BerylCap from '../components/BerylCap';
 
 export default function HomePage({ onNavigate, onOpenContact }) {
   const [activeStep, setActiveStep] = useState(0);
@@ -73,14 +75,14 @@ export default function HomePage({ onNavigate, onOpenContact }) {
 
               {/* Primary & Secondary CTAs */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', marginBottom: '2.5rem' }}>
-                <button
+                <SpiderButton
                   onClick={() => onNavigate('capabilities')}
-                  className="btn btn-primary"
-                  style={{ padding: '0.95rem 1.85rem' }}
+                  size={50}
+                  buttonStyle={{ padding: '0 1.95rem', fontSize: '0.95rem' }}
                 >
                   <span>Explore What We Do</span>
                   <ArrowRight size={17} />
-                </button>
+                </SpiderButton>
                 <button
                   onClick={onOpenContact}
                   className="btn btn-outline"
@@ -113,9 +115,64 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </div>
             </div>
 
-            {/* Right Hero Visual Column - Interactive Architecture Cockpit */}
-            <div style={{ position: 'relative' }}>
-              <HeroTechConsole />
+            {/* Right Hero Visual Column - Single Glass Keyboard Keycap with Pro17 Logo */}
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                height: 'clamp(460px, 45vw, 600px)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                background: 'transparent',
+              }}
+            >
+              <BerylCap
+                mark="/images/pro17-logo.png"
+                legend="pro17"
+                size={540}
+                dispersion={65}
+                background="transparent"
+                print={{
+                  size: 140,
+                  tint: true,
+                  x: 0,
+                  y: 0,
+                }}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  background: 'transparent',
+                  filter: 'drop-shadow(0 30px 45px rgba(0, 0, 0, 0.14)) drop-shadow(0 10px 20px rgba(152, 27, 37, 0.08))',
+                }}
+              />
+
+              {/* Interactive Glass Keycap Hint */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '0.75rem',
+                  right: '1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.88)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(45, 40, 42, 0.1)',
+                  borderRadius: '9999px',
+                  padding: '0.35rem 0.85rem',
+                  fontSize: '0.725rem',
+                  fontWeight: 600,
+                  color: '#4A4245',
+                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.06)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  pointerEvents: 'none',
+                  userSelect: 'none',
+                  zIndex: 10,
+                }}
+              >
+                <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#981B25' }}></div>
+                <span>Glass Keycap • Hover &amp; Click</span>
+              </div>
             </div>
           </div>
         </div>
@@ -412,13 +469,14 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                <button
+                <SpiderButton
                   onClick={() => onNavigate('products')}
-                  className="btn btn-primary"
+                  size={46}
+                  buttonStyle={{ padding: '0 1.75rem', fontSize: '0.925rem' }}
                 >
                   <span>Explore BinaraIQ™</span>
                   <ArrowRight size={16} />
-                </button>
+                </SpiderButton>
                 <button
                   onClick={onOpenContact}
                   className="btn btn-outline-white"
@@ -816,10 +874,14 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </div>
 
               <div style={{ display: 'flex', gap: '1rem' }}>
-                <button onClick={onOpenContact} className="btn btn-primary">
+                <SpiderButton
+                  onClick={onOpenContact}
+                  size={46}
+                  buttonStyle={{ padding: '0 1.75rem', fontSize: '0.925rem' }}
+                >
                   <span>Connect With Our Team</span>
                   <ArrowRight size={16} />
-                </button>
+                </SpiderButton>
               </div>
             </div>
 
@@ -887,14 +949,14 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </p>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                <button
+                <SpiderButton
                   onClick={onOpenContact}
-                  className="btn btn-primary"
-                  style={{ padding: '0.95rem 2rem' }}
+                  size={50}
+                  buttonStyle={{ padding: '0 2rem', fontSize: '0.975rem' }}
                 >
                   <span>Start a Conversation</span>
                   <ArrowRight size={17} />
-                </button>
+                </SpiderButton>
                 <button
                   onClick={() => onNavigate('products')}
                   className="btn btn-outline-white"

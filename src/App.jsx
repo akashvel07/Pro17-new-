@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ContactModal from './components/ContactModal';
+import UserCursor from './components/UserCursor';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import CapabilitiesPage from './pages/CapabilitiesPage';
@@ -41,6 +42,9 @@ export default function App() {
 
   return (
     <div className="app-root" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {/* Interactive Figma/OriginKit-style User Cursor */}
+      <UserCursor name="You" color="#981B25" secondaryColor="#2D282A" />
+
       {/* Top Header */}
       <Header
         currentRoute={currentRoute}

@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { PRODUCTS, ALSO_AVAILABLE, BRAND_INFO } from '../data/content';
 import { BinaraIQDemo, ProNexaIQDemo, EduceERPDemo, ProSageIQDemo } from '../components/ProductSimulators';
+import SpiderButton from '../components/SpiderButton';
 
 export default function ProductsPage({ onNavigate, onOpenContact }) {
   const [activeProductTab, setActiveProductTab] = useState(0);
@@ -153,10 +154,14 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
 
                     {/* CTA */}
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                      <button onClick={onOpenContact} className="btn btn-primary">
+                      <SpiderButton
+                        onClick={onOpenContact}
+                        size={46}
+                        buttonStyle={{ padding: '0 1.75rem', fontSize: '0.925rem' }}
+                      >
                         <span>Request a Product Demo</span>
                         <ArrowRight size={16} />
-                      </button>
+                      </SpiderButton>
                     </div>
                   </div>
 
@@ -240,13 +245,13 @@ export default function ProductsPage({ onNavigate, onOpenContact }) {
                     <span>View Interactive UI</span>
                     <ArrowRight size={14} />
                   </button>
-                  <button
+                  <SpiderButton
                     onClick={onOpenContact}
-                    className="btn btn-primary"
-                    style={{ padding: '0.65rem 1rem', fontSize: '0.85rem' }}
+                    size={38}
+                    buttonStyle={{ padding: '0 1.15rem', fontSize: '0.85rem' }}
                   >
                     <span>Request Demo</span>
-                  </button>
+                  </SpiderButton>
                 </div>
               </div>
             ))}

@@ -109,182 +109,308 @@ export function HeroTechConsole() {
       </div>
 
       {/* Dynamic Visual Architecture Stage */}
-      <div style={{ padding: '1.5rem', position: 'relative' }}>
+      <div style={{ padding: '1.75rem 1.5rem', position: 'relative' }}>
         {activeTab === 'data' && (
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+            {/* Stage Header */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Core Telemetry Stream</div>
-                <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
-                  Enterprise Data &amp; AI Intelligence
+                <div style={{ fontSize: '0.68rem', color: '#9E979A', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>
+                  Active Data Pipeline
+                </div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>
+                  Enterprise Data &amp; AI Fabric
                 </div>
               </div>
-              <span className="pill-badge" style={{ backgroundColor: '#352E31', color: '#D4CED1', border: '1px solid #4D4548', fontSize: '0.7rem' }}>
-                Event-Driven Flow
-              </span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(16, 185, 129, 0.12)', border: '1px solid rgba(16, 185, 129, 0.25)', padding: '4px 10px', borderRadius: '9999px' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#10B981' }} />
+                <span style={{ fontSize: '0.7rem', color: '#10B981', fontWeight: 700 }}>SYNCHRONIZED</span>
+              </div>
             </div>
 
-            {/* Pipeline Step Visualizer */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginBottom: '1.25rem' }}>
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+            {/* Architecture Node Flow (Spacious 3-Stage Pipeline) */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
+              {/* Node 1: Ingestion */}
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Database size={16} color="#981B25" />
-                  <span style={{ fontSize: '0.65rem', color: '#10B981', fontWeight: 700 }}>SYNCHRONIZED</span>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>Ingestion</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#FFFFFF' }}>Data Ingestion</div>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3', marginTop: '2px' }}>Kafka · Batch · APIs</div>
-                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F87171', marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>
-                  {counter.toLocaleString()} evt
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>Kafka · Batch · APIs</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#F87171', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  {counter.toLocaleString()}
+                  <span style={{ fontSize: '0.65rem', color: '#9E979A', fontWeight: 500, marginLeft: '4px' }}>evt/s</span>
                 </div>
               </div>
 
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+              {/* Node 2: Governance */}
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Cpu size={16} color="#00A4EF" />
-                  <span style={{ fontSize: '0.65rem', color: '#00A4EF', fontWeight: 700 }}>99.98% QUALITY</span>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>Governance</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#FFFFFF' }}>Model Governance</div>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3', marginTop: '2px' }}>Feature Store · Lineage</div>
-                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#00A4EF', marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>
-                  Zero Drift
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>Feature Store &amp; Lineage</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#00A4EF', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  99.98%
+                  <span style={{ fontSize: '0.65rem', color: '#9E979A', fontWeight: 500, marginLeft: '4px' }}>quality</span>
                 </div>
               </div>
 
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
+              {/* Node 3: AI Copilots */}
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <Sparkles size={16} color="#F59E0B" />
-                  <span style={{ fontSize: '0.65rem', color: '#F59E0B', fontWeight: 700 }}>AUTONOMOUS</span>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>AI Reasoning</span>
                 </div>
-                <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#FFFFFF' }}>AI Copilots &amp; Agents</div>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3', marginTop: '2px' }}>ProSageIQ Intelligence</div>
-                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#F59E0B', marginTop: '0.5rem', fontFamily: 'var(--font-mono)' }}>
-                  Active Reasoning
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>ProSageIQ Agents</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#F59E0B', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  Autonomous
+                  <span style={{ fontSize: '0.65rem', color: '#9E979A', fontWeight: 500, marginLeft: '4px' }}>state</span>
                 </div>
               </div>
             </div>
 
-            {/* Performance Metric Stream */}
-            <div style={{ backgroundColor: '#292326', border: '1px solid #40383B', borderRadius: '10px', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Audit Verified Standard</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FFFFFF' }}>Microsoft Solutions Partner · Data &amp; AI</div>
+            {/* Minimalist Live Telemetry Bar */}
+            <div
+              style={{
+                backgroundColor: '#241E20',
+                border: '1px solid #3B3235',
+                borderRadius: '10px',
+                padding: '0.85rem 1.1rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '0.74rem'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#D4CED1' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#10B981', display: 'inline-block' }} />
+                <span>Zero Drift Model Guarantee</span>
               </div>
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <span className="pill-badge" style={{ backgroundColor: 'rgba(16, 185, 129, 0.15)', color: '#10B981', border: '1px solid rgba(16, 185, 129, 0.3)', fontSize: '0.7rem' }}>
-                  SOC Certified
-                </span>
-                <span className="pill-badge" style={{ backgroundColor: 'rgba(152, 27, 37, 0.2)', color: '#F87171', border: '1px solid rgba(152, 27, 37, 0.4)', fontSize: '0.7rem' }}>
-                  ISO 27001
-                </span>
-              </div>
+              <span style={{ color: '#F87171', fontWeight: 600, fontFamily: 'var(--font-mono)', fontSize: '0.72rem' }}>
+                Event-Driven Architecture
+              </span>
             </div>
           </div>
         )}
 
         {activeTab === 'cloud' && (
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Hybrid Infrastructure</div>
-                <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
-                  Multi-Region Cloud &amp; Modernization
+                <div style={{ fontSize: '0.68rem', color: '#9E979A', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>
+                  Hybrid Topology
+                </div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>
+                  Multi-Region Cloud Modernization
                 </div>
               </div>
-              <span className="pill-badge" style={{ backgroundColor: '#352E31', color: '#D4CED1', border: '1px solid #4D4548', fontSize: '0.7rem' }}>
-                Azure · AWS · Hybrid
-              </span>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginBottom: '1.25rem' }}>
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Microservices Fabric</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>Kubernetes Native</div>
-                <div style={{ fontSize: '0.72rem', color: '#10B981', fontWeight: 600, marginTop: '6px' }}>100% Zero-Downtime</div>
-              </div>
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>API Gateway Ingress</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>Global Edge CDN</div>
-                <div style={{ fontSize: '0.72rem', color: '#00A4EF', fontWeight: 600, marginTop: '6px' }}>&lt; 14ms Route Latency</div>
-              </div>
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Continuous Delivery</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>Automated CI/CD</div>
-                <div style={{ fontSize: '0.72rem', color: '#F87171', fontWeight: 600, marginTop: '6px' }}>Immutable Deploys</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(0, 164, 239, 0.12)', border: '1px solid rgba(0, 164, 239, 0.25)', padding: '4px 10px', borderRadius: '9999px' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#00A4EF' }} />
+                <span style={{ fontSize: '0.7rem', color: '#00A4EF', fontWeight: 700 }}>HIGH AVAILABILITY</span>
               </div>
             </div>
 
-            <div style={{ backgroundColor: '#292326', border: '1px solid #40383B', borderRadius: '10px', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <Server size={18} color="#981B25" />
-                <span style={{ fontSize: '0.85rem', color: '#FFFFFF', fontWeight: 600 }}>Multi-Region High Availability Enabled</span>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>Service Mesh</div>
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>Kubernetes Native</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#10B981', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  Zero-Downtime
+                </div>
               </div>
-              <span style={{ fontSize: '0.75rem', color: '#10B981', fontWeight: 700 }}>99.99% Target Uptime</span>
+
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>API Ingress</div>
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>Global Edge CDN</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#00A4EF', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  &lt; 14ms Latency
+                </div>
+              </div>
+
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>Deploys</div>
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>Automated CI/CD</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#F87171', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  Immutable
+                </div>
+              </div>
+            </div>
+
+            <div
+              style={{
+                backgroundColor: '#241E20',
+                border: '1px solid #3B3235',
+                borderRadius: '10px',
+                padding: '0.85rem 1.1rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '0.74rem'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#D4CED1' }}>
+                <Server size={15} color="#981B25" />
+                <span>Multi-Region Azure &amp; AWS Sync</span>
+              </div>
+              <span style={{ color: '#10B981', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>99.99% Uptime SLA</span>
             </div>
           </div>
         )}
 
         {activeTab === 'edge' && (
           <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
               <div>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3', textTransform: 'uppercase', letterSpacing: '0.08em' }}>Operational Technology</div>
-                <div style={{ fontSize: '1.05rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
+                <div style={{ fontSize: '0.68rem', color: '#9E979A', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>
+                  Edge Operations
+                </div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>
                   IoT Connected Assets &amp; Educe ERP
                 </div>
               </div>
-              <span className="pill-badge" style={{ backgroundColor: '#352E31', color: '#D4CED1', border: '1px solid #4D4548', fontSize: '0.7rem' }}>
-                BinaraIQ™ Powered
-              </span>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginBottom: '1.25rem' }}>
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Sensor Telemetry</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>UHF / BLE / QR</div>
-                <div style={{ fontSize: '0.72rem', color: '#10B981', fontWeight: 600, marginTop: '6px' }}>Sub-second Polling</div>
-              </div>
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>Predictive Maintenance</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>AI Anomaly Detect</div>
-                <div style={{ fontSize: '0.72rem', color: '#00A4EF', fontWeight: 600, marginTop: '6px' }}>Zero Unexpected Stops</div>
-              </div>
-              <div style={{ backgroundColor: '#252022', border: '1px solid #3F373A', padding: '1rem', borderRadius: '10px' }}>
-                <div style={{ fontSize: '0.7rem', color: '#A8A0A3' }}>ERP Reconciliation</div>
-                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: '#FFFFFF', marginTop: '3px' }}>Educe Real-time</div>
-                <div style={{ fontSize: '0.72rem', color: '#F87171', fontWeight: 600, marginTop: '6px' }}>Full Audit Trail</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', backgroundColor: 'rgba(245, 158, 11, 0.12)', border: '1px solid rgba(245, 158, 11, 0.25)', padding: '4px 10px', borderRadius: '9999px' }}>
+                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#F59E0B' }} />
+                <span style={{ fontSize: '0.7rem', color: '#F59E0B', fontWeight: 700 }}>BINARAIQ™ LIVE</span>
               </div>
             </div>
 
-            <div style={{ backgroundColor: '#292326', border: '1px solid #40383B', borderRadius: '10px', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                <Radio size={18} color="#981B25" />
-                <span style={{ fontSize: '0.85rem', color: '#FFFFFF', fontWeight: 600 }}>Active Asset Tracking &amp; Edge Sync</span>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.5rem' }}>
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>Sensor Mesh</div>
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>UHF / BLE / QR</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#10B981', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  Sub-second
+                </div>
               </div>
-              <span style={{ fontSize: '0.75rem', color: '#10B981', fontWeight: 700 }}>Live Telemetry</span>
+
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>Maintenance</div>
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>AI Anomaly Detect</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#00A4EF', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  Zero Outages
+                </div>
+              </div>
+
+              <div
+                style={{
+                  backgroundColor: '#272123',
+                  border: '1px solid #43393C',
+                  borderRadius: '12px',
+                  padding: '1.25rem 1rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.5rem'
+                }}
+              >
+                <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FFFFFF' }}>Reconciliation</div>
+                <div style={{ fontSize: '0.72rem', color: '#9E979A' }}>Educe ERP Engine</div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 800, color: '#F87171', fontFamily: 'var(--font-mono)', marginTop: '0.25rem' }}>
+                  Real-time
+                </div>
+              </div>
+            </div>
+
+            <div
+              style={{
+                backgroundColor: '#241E20',
+                border: '1px solid #3B3235',
+                borderRadius: '10px',
+                padding: '0.85rem 1.1rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                fontSize: '0.74rem'
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', color: '#D4CED1' }}>
+                <Radio size={15} color="#981B25" />
+                <span>BinaraIQ™ Connected Edge Stream</span>
+              </div>
+              <span style={{ color: '#10B981', fontWeight: 700, fontFamily: 'var(--font-mono)' }}>Telemetry Active</span>
             </div>
           </div>
         )}
-
-        {/* Supporting Editorial Glass Banner */}
-        <div
-          style={{
-            marginTop: '1.5rem',
-            backgroundColor: '#2D282A',
-            border: '1px solid #4A4245',
-            borderRadius: '12px',
-            padding: '1.15rem 1.35rem'
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
-            <span style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.1em', color: '#EDE8EA', textTransform: 'uppercase' }}>
-              Engineering Philosophy
-            </span>
-            <span style={{ fontSize: '0.7rem', color: '#C2BCBE' }}>Verified Brand Promise</span>
-          </div>
-          <div style={{ fontSize: '0.925rem', fontWeight: 600, color: '#FFFFFF', lineHeight: 1.5 }}>
-            "{BRAND_INFO.extensionMessage}"
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Globe, MapPin, Send, CheckCircle, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react';
 import { BRAND_INFO, CAPABILITIES, PRODUCTS } from '../data/content';
 import PartnerBadges from '../components/PartnerBadges';
+import SpiderButton from '../components/SpiderButton';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -308,11 +309,12 @@ export default function ContactPage() {
                     By submitting this form, you acknowledge that your information will be processed in accordance with our enterprise confidentiality and data privacy practices. We never share contact details with third parties.
                   </div>
 
-                  <button
+                  <SpiderButton
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="btn btn-primary"
-                    style={{ width: '100%', padding: '0.95rem' }}
+                    size={50}
+                    style={{ width: '100%' }}
+                    buttonStyle={{ width: '100%', padding: '0 1.5rem', fontSize: '0.975rem' }}
                   >
                     {status === 'submitting' ? (
                       'Submitting Inquiry...'
@@ -322,7 +324,7 @@ export default function ContactPage() {
                         <Send size={16} />
                       </>
                     )}
-                  </button>
+                  </SpiderButton>
                 </form>
               )}
             </div>
