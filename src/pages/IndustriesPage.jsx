@@ -12,7 +12,6 @@ import {
   ArrowUpRight
 } from 'lucide-react';
 import { INDUSTRIES, BRAND_INFO } from '../data/content';
-import SpiderButton from '../components/SpiderButton';
 
 export default function IndustriesPage({ onNavigate, onOpenContact }) {
   const industryIcons = {
@@ -139,14 +138,10 @@ export default function IndustriesPage({ onNavigate, onOpenContact }) {
                 No matter your sector or geography, Pro17Analytics brings practical technical execution across our delivery hubs in the USA, Canada, India, and Singapore.
               </p>
               <div style={{ display: 'flex', gap: '1rem' }}>
-                <SpiderButton
-                  onClick={onOpenContact}
-                  size={46}
-                  buttonStyle={{ padding: '0 1.75rem', fontSize: '0.925rem' }}
-                >
+                <button onClick={onOpenContact} className="btn btn-primary">
                   <span>Start a Sector Discussion</span>
                   <ArrowRight size={16} />
-                </SpiderButton>
+                </button>
               </div>
             </div>
 

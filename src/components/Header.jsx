@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight, PhoneCall } from 'lucide-react';
 import ProLogo from './ProLogo';
-import SpiderButton from './SpiderButton';
 
 export default function Header({ currentRoute, onNavigate, onOpenContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,28 +60,27 @@ export default function Header({ currentRoute, onNavigate, onOpenContact }) {
 
             {/* Desktop CTA */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <SpiderButton
+              <button
                 onClick={onOpenContact}
-                size={40}
-                buttonStyle={{ padding: '0 1.35rem', fontSize: '0.875rem' }}
+                className="btn btn-primary"
+                style={{ padding: '0.65rem 1.4rem', fontSize: '0.9rem' }}
               >
                 <span>Let's Talk</span>
-                <ArrowUpRight size={15} />
-              </SpiderButton>
+                <ArrowUpRight size={16} />
+              </button>
             </div>
           </nav>
 
           {/* Mobile Menu Button */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <SpiderButton
+            <button
               id="mobile-header-cta"
               onClick={onOpenContact}
-              size={34}
-              style={{ display: 'none' }}
-              buttonStyle={{ padding: '0 0.9rem', fontSize: '0.825rem' }}
+              className="btn btn-primary"
+              style={{ padding: '0.5rem 1rem', fontSize: '0.825rem', display: 'none' }}
             >
               Talk
-            </SpiderButton>
+            </button>
             <button
               className="mobile-nav-toggle"
               onClick={() => setMobileMenuOpen(true)}
@@ -151,18 +149,17 @@ export default function Header({ currentRoute, onNavigate, onOpenContact }) {
             <a href="mailto:sales@pro17analytics.com" style={{ color: '#981B25' }}>sales@pro17analytics.com</a>
           </div>
 
-          <SpiderButton
+          <button
             onClick={() => {
               setMobileMenuOpen(false);
               onOpenContact();
             }}
-            size={46}
-            style={{ width: '100%' }}
-            buttonStyle={{ width: '100%', padding: '0 1.5rem', fontSize: '0.95rem' }}
+            className="btn btn-primary"
+            style={{ width: '100%', padding: '0.85rem' }}
           >
             <span>Let's Talk</span>
             <ArrowUpRight size={18} />
-          </SpiderButton>
+          </button>
         </div>
       </aside>
     </>

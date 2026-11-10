@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
-import { 
-  ArrowRight, 
-  ArrowUpRight, 
-  Database, 
-  Network, 
-  Cloud, 
-  Radio, 
-  Layers, 
-  CheckCircle, 
-  Globe2 
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Database,
+  Network,
+  Cloud,
+  Radio,
+  Layers,
+  CheckCircle,
+  Globe2
 } from 'lucide-react';
-import { 
-  BRAND_INFO, 
-  VALUE_PILLARS, 
-  DELIVERY_STEPS, 
-  CAPABILITIES, 
-  PRODUCTS, 
-  ALSO_AVAILABLE, 
-  INDUSTRIES 
+import {
+  BRAND_INFO,
+  VALUE_PILLARS,
+  DELIVERY_STEPS,
+  CAPABILITIES,
+  PRODUCTS,
+  ALSO_AVAILABLE,
+  INDUSTRIES
 } from '../data/content';
 import PartnerBadges from '../components/PartnerBadges';
 import { BinaraIQDemo, ProNexaIQDemo, EduceERPDemo, ProSageIQDemo } from '../components/ProductSimulators';
 import { GlobalOperationsMap } from '../components/ProfessionalVisuals';
-import SpiderButton from '../components/SpiderButton';
-import BerylCap from '../components/BerylCap';
 
 export default function HomePage({ onNavigate, onOpenContact }) {
   const [activeStep, setActiveStep] = useState(0);
@@ -75,14 +73,14 @@ export default function HomePage({ onNavigate, onOpenContact }) {
 
               {/* Primary & Secondary CTAs */}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', marginBottom: '2.5rem' }}>
-                <SpiderButton
+                <button
                   onClick={() => onNavigate('capabilities')}
-                  size={50}
-                  buttonStyle={{ padding: '0 1.95rem', fontSize: '0.95rem' }}
+                  className="btn btn-primary"
+                  style={{ padding: '0.95rem 1.85rem' }}
                 >
                   <span>Explore What We Do</span>
                   <ArrowRight size={17} />
-                </SpiderButton>
+                </button>
                 <button
                   onClick={onOpenContact}
                   className="btn btn-outline"
@@ -115,63 +113,52 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </div>
             </div>
 
-            {/* Right Hero Visual Column - Single Glass Keyboard Keycap with Pro17 Logo */}
-            <div
-              style={{
-                position: 'relative',
-                width: '100%',
-                height: 'clamp(460px, 45vw, 600px)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: 'transparent',
-              }}
-            >
-              <BerylCap
-                mark="/images/pro17-logo.png"
-                legend="pro17"
-                size={540}
-                dispersion={65}
-                background="transparent"
-                print={{
-                  size: 140,
-                  tint: true,
-                  x: 0,
-                  y: 0,
-                }}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  background: 'transparent',
-                  filter: 'drop-shadow(0 30px 45px rgba(0, 0, 0, 0.14)) drop-shadow(0 10px 20px rgba(152, 27, 37, 0.08))',
-                }}
-              />
-
-              {/* Interactive Glass Keycap Hint */}
+            {/* Right Hero Visual Column - First Version Summit Imagery */}
+            <div style={{ position: 'relative' }}>
               <div
                 style={{
-                  position: 'absolute',
-                  bottom: '0.75rem',
-                  right: '1rem',
-                  backgroundColor: 'rgba(255, 255, 255, 0.88)',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(45, 40, 42, 0.1)',
-                  borderRadius: '9999px',
-                  padding: '0.35rem 0.85rem',
-                  fontSize: '0.725rem',
-                  fontWeight: 600,
-                  color: '#4A4245',
-                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.06)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.45rem',
-                  pointerEvents: 'none',
-                  userSelect: 'none',
-                  zIndex: 10,
+                  borderRadius: '20px',
+                  overflow: 'hidden',
+                  boxShadow: '0 20px 50px rgba(45, 40, 42, 0.12)',
+                  border: '1px solid #E7E5E3',
+                  position: 'relative'
                 }}
               >
-                <div style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#981B25' }}></div>
-                <span>Glass Keycap • Hover &amp; Click</span>
+                <img
+                  src="/images/hero-summit.jpg"
+                  alt="Executive perspective on mountain summit representing clarity, strategic height and practical engineering"
+                  style={{
+                    width: '100%',
+                    height: 'clamp(360px, 45vw, 520px)',
+                    objectFit: 'cover'
+                  }}
+                />
+
+                {/* Overlaid Editorial Glass Badge */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '1.5rem',
+                    left: '1.5rem',
+                    right: '1.5rem',
+                    backgroundColor: 'rgba(45, 40, 42, 0.92)',
+                    backdropFilter: 'blur(8px)',
+                    padding: '1.25rem 1.5rem',
+                    borderRadius: '12px',
+                    color: '#FFFFFF',
+                    border: '1px solid rgba(255, 255, 255, 0.15)'
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.35rem' }}>
+                    <span style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.1em', color: '#DCEEF5' }}>
+                      ENGINEERING PHILOSOPHY
+                    </span>
+                    <span style={{ fontSize: '0.7rem', color: '#C2BCBE' }}>Global Delivery</span>
+                  </div>
+                  <div style={{ fontSize: '0.95rem', fontWeight: 600, color: '#FFFFFF' }}>
+                    {BRAND_INFO.extensionMessage}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -469,14 +456,13 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                <SpiderButton
+                <button
                   onClick={() => onNavigate('products')}
-                  size={46}
-                  buttonStyle={{ padding: '0 1.75rem', fontSize: '0.925rem' }}
+                  className="btn btn-primary"
                 >
                   <span>Explore BinaraIQ™</span>
                   <ArrowRight size={16} />
-                </SpiderButton>
+                </button>
                 <button
                   onClick={onOpenContact}
                   className="btn btn-outline-white"
@@ -874,14 +860,10 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </div>
 
               <div style={{ display: 'flex', gap: '1rem' }}>
-                <SpiderButton
-                  onClick={onOpenContact}
-                  size={46}
-                  buttonStyle={{ padding: '0 1.75rem', fontSize: '0.925rem' }}
-                >
+                <button onClick={onOpenContact} className="btn btn-primary">
                   <span>Connect With Our Team</span>
                   <ArrowRight size={16} />
-                </SpiderButton>
+                </button>
               </div>
             </div>
 
@@ -949,14 +931,14 @@ export default function HomePage({ onNavigate, onOpenContact }) {
               </p>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                <SpiderButton
+                <button
                   onClick={onOpenContact}
-                  size={50}
-                  buttonStyle={{ padding: '0 2rem', fontSize: '0.975rem' }}
+                  className="btn btn-primary"
+                  style={{ padding: '0.95rem 2rem' }}
                 >
                   <span>Start a Conversation</span>
                   <ArrowRight size={17} />
-                </SpiderButton>
+                </button>
                 <button
                   onClick={() => onNavigate('products')}
                   className="btn btn-outline-white"

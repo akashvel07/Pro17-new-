@@ -14,7 +14,6 @@ import {
   Cpu
 } from 'lucide-react';
 import { CAPABILITIES, BRAND_INFO } from '../data/content';
-import SpiderButton from '../components/SpiderButton';
 
 export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
   const [selectedCap, setSelectedCap] = useState(0);
@@ -144,14 +143,10 @@ export default function CapabilitiesPage({ onNavigate, onOpenContact }) {
                       </div>
                     </div>
 
-                    <SpiderButton
-                      onClick={onOpenContact}
-                      size={46}
-                      buttonStyle={{ padding: '0 1.75rem', fontSize: '0.925rem' }}
-                    >
+                    <button onClick={onOpenContact} className="btn btn-primary">
                       <span>Discuss Your {current.title} Project</span>
                       <ArrowRight size={16} />
-                    </SpiderButton>
+                    </button>
                   </div>
 
                   {/* Right Column: Challenge, Value, Approach */}

@@ -3,7 +3,6 @@ import { ArrowUpRight, Mail, Globe, MapPin } from 'lucide-react';
 import ProLogo from './ProLogo';
 import { BRAND_INFO, CAPABILITIES, PRODUCTS } from '../data/content';
 import VectorWordmark from './VectorWordmark';
-import SpiderButton from './SpiderButton';
 import Snowfall from './Snowfall';
 
 export default function Footer({ onNavigate, onOpenContact }) {
@@ -162,15 +161,14 @@ export default function Footer({ onNavigate, onOpenContact }) {
               </a>
             </div>
 
-            <SpiderButton
+            <button
               onClick={onOpenContact}
-              size={42}
-              style={{ width: '100%' }}
-              buttonStyle={{ width: '100%', padding: '0 1.25rem', fontSize: '0.85rem' }}
+              className="btn btn-primary"
+              style={{ padding: '0.65rem 1.25rem', fontSize: '0.85rem', width: '100%' }}
             >
               <span>Schedule a Discussion</span>
               <ArrowUpRight size={15} />
-            </SpiderButton>
+            </button>
           </div>
         </div>
 

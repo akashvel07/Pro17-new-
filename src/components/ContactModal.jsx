@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { X, CheckCircle, AlertCircle, Send, ArrowRight } from 'lucide-react';
 import { BRAND_INFO } from '../data/content';
-import SpiderButton from './SpiderButton';
 
 export default function ContactModal({ isOpen, onClose, initialInterest = 'Data & AI' }) {
   const [formData, setFormData] = useState({
@@ -290,12 +289,11 @@ export default function ContactModal({ isOpen, onClose, initialInterest = 'Data 
 
               {/* Actions */}
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <SpiderButton
+                <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  size={48}
-                  style={{ width: '100%', flex: 1 }}
-                  buttonStyle={{ width: '100%', padding: '0 1.5rem', fontSize: '0.95rem' }}
+                  className="btn btn-primary"
+                  style={{ flex: 1, padding: '0.9rem' }}
                 >
                   {status === 'submitting' ? (
                     'Submitting Enquiry...'
@@ -305,7 +303,7 @@ export default function ContactModal({ isOpen, onClose, initialInterest = 'Data 
                       <Send size={16} />
                     </>
                   )}
-                </SpiderButton>
+                </button>
               </div>
             </form>
           )}

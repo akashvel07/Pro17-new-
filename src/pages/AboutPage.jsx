@@ -3,7 +3,6 @@ import { ArrowRight, ArrowUpRight, CheckCircle, Globe2, ShieldCheck, HeartHandsh
 import { BRAND_INFO, VALUE_PILLARS, DELIVERY_STEPS, INDUSTRIES } from '../data/content';
 import PartnerBadges from '../components/PartnerBadges';
 import { TeamExtensionFramework, GlobalOperationsMap } from '../components/ProfessionalVisuals';
-import SpiderButton from '../components/SpiderButton';
 
 export default function AboutPage({ onNavigate, onOpenContact }) {
   return (
@@ -20,14 +19,10 @@ export default function AboutPage({ onNavigate, onOpenContact }) {
               {BRAND_INFO.description}
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <SpiderButton
-                onClick={onOpenContact}
-                size={48}
-                buttonStyle={{ padding: '0 1.85rem', fontSize: '0.95rem' }}
-              >
+              <button onClick={onOpenContact} className="btn btn-primary">
                 <span>Start a Conversation</span>
                 <ArrowRight size={17} />
-              </SpiderButton>
+              </button>
               <button onClick={() => onNavigate('capabilities')} className="btn btn-outline">
                 <span>Our Capabilities</span>
                 <ArrowUpRight size={17} />
